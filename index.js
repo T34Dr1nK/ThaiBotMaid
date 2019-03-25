@@ -71,7 +71,7 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase();
   
   
-  if(command === "เตะ"){
+    if(command === "เตะ"){
     
     const user = message.mentions.users.first();
     
@@ -80,9 +80,9 @@ client.on("message", async message => {
       const member = message.guild.member(user);
       
       if (member) {
-        
-        member.kick('ไม่มีเหตุผลเจ้าค่ะ').then(() => {
-          
+        	      
+		member.send("ท่านถูกเตะออกจากเซิฟเจ้าคะ");
+        member.kick('ไม่มีเหตุผลเจ้าค่ะ').then(() => {  
           message.reply(`เตะท่าน ${user.tag} ออกจากห้องสําเร็จแล้วคะ`);
         }).catch(err => {
           
