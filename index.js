@@ -54,6 +54,10 @@ client.on("guildMemberAdd", member => {
   channel.send(`ยินดีต้อนรับนายท่าน , ${member} สู่ server นะเจ้าค่ะ`);
   member.send("สวัสดีค่ะยินดีต้อนรับสู่ Server นะคะ");
 });
+client.on("guildMemberRemove", member => {
+  const channel = getDefaultChannel(member.guild);
+  channel.send(`นายท่าน , ${member} ได้ออกจาก เซิฟเวอร์`);
+});
 
 
 client.on("message", async message => {
