@@ -1,14 +1,8 @@
 const Discord = require("discord.js");
 
-
-
-
 var Long = require("long");
 
-
-
 const client = new Discord.Client();
-
 
 const config = require("./config.json");
 
@@ -31,10 +25,6 @@ client.on("guildDelete", guild => {
   console.log(`I have been removed from: ${guild.name} (id: ${guild.id})`);
   client.user.setActivity(`กําลังบริการอยู่ ${client.guilds.size} servers เจ้าคะ `);
 });
-
-
-
-
 
 
 const getDefaultChannel = (guild) => {
@@ -183,16 +173,7 @@ client.on("message", async message => {
  
  
 
-
-
-
-
-
-
-
-
-
- if(command === "คู่มือ"){
+  if(command === "คู่มือ"){
 	  message.author.send("ขณะนี้นายท่านสามารถใช้คําสั่งได้ดังนี้เจ้าค่ะ \n |ลบ เพื่อลบข้อความเก่าในช่องแชทค่ะ exe.|ลบ แล้วตามด้วยจํานวนข้อที่จะลบตั้่งแต่ 2-100 ค่ะ.  \n |เตะ   เอาไว้เตะคนออกจากห้องเจ้าค่ะ exe.|เตะ ตามด้วยการMentionค่ะ. \n |แบน   เอาไว้แบนคนออกจากห้องค่ะ  exe.|แบน ตามด้วยการMentionเจ้าค่ะ. \n |เช็คปิง เอาไว้ดูปืงภายในserverว่าเสถียรแค่ไหน exe.|เช็คปิง . \n |พูด เวลาที่นายท่านไม่อยากพูดเองให้ฉันแทนนายท่านได้เจ้าค่ะ exe.|พูด ตามด้วยข้อความที่จะให้ฉันพูดค่ะ \n และถ้านายท่านมีห้อง general อยู่ฉันก็จะไปต้อนรับแขกที่เข้ามาใหม่ที่ห้องนั้นค่ะ");
 	  return message.reply("ส่งข้อความเข้า DM แล้วค่ะ");
   }
