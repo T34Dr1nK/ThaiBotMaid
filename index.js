@@ -153,7 +153,7 @@ client.on("message", async message => {
   }
  
   if(command === "แอดพูด") {
-
+    const perm=message.member.permissions;
     if (user) {
       if (perm.has('Mod')) {
     const sayMessage = args.join(" ");
