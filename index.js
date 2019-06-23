@@ -152,7 +152,22 @@ client.on("message", async message => {
     message.channel.send(sayMessage+" จากท่าน"+" "+user);
   }
  
- 
+  if(command === "แอดพูด") {
+
+    if (user) {
+      if (perm.has('Mod')) {
+    const sayMessage = args.join(" ");
+	const user= message.author;
+	
+	message.delete().catch(O_o=>{}); 
+
+    message.channel.send(sayMessage);
+      }
+      else{
+        message.channel.send("คณยังไม่ได้รับความสามารถนี้คะ")
+      }
+    }
+  }
 
 
 
