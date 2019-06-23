@@ -155,7 +155,7 @@ client.on("message", async message => {
   if(command === "แอดพูด") {
     const perm=message.member.permissions;
     if (user) {
-      if (perm.has('Mod')) {
+      if (perm.has('ADMINISTRATOR')) {
     const sayMessage = args.join(" ");
 	const user= message.author;
 	
