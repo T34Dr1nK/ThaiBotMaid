@@ -154,7 +154,6 @@ client.on("message", async message => {
  
   if(command === "แอดพูด") {
     const perm=message.member.permissions;
-    if (user) {
       if (perm.has('ADMINISTRATOR')) {
     const sayMessage = args.join(" ");
 	const user= message.author;
@@ -164,9 +163,8 @@ client.on("message", async message => {
     message.channel.send(sayMessage);
       }
       else{
-        message.channel.send("คณยังไม่ได้รับความสามารถนี้คะ")
+        message.reply("คณยังไม่ได้รับความสามารถนี้คะ")
       }
-    }
   }
 
 
