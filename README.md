@@ -1,2 +1,2 @@
 # DiscordBot
-asd
+Discord Bot maid in thai Ver.
