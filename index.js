@@ -153,8 +153,8 @@ client.on("message", async message => {
   }
  
   if(command === "แอดพูด") {
-    const perm=message.member.permissions;
-      if (perm.has('ADMINISTRATOR')) {
+    const perm= new Permissions(Permissions.FLAGS.ADMINISTRATOR);
+      if (perm.has(Permissions.FLAGS.ADMINISTRATOR)) {
     const sayMessage = args.join(" ");
 	const user= message.author;
 	
